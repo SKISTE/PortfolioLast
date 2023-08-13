@@ -3,7 +3,7 @@
 :root{
     --text: #000000;
     --background: #fcfeec;
-    --primary: #a39af9;
+    --primary: #d4d0fa;
     --secondary: #e8cafc;
     --accent: #0e67ec;
     --bg_accent: #eff1e0;
@@ -61,7 +61,7 @@ a{
     justify-content: center;
     align-items: center;
     /* background-size: 400% 400%; */
-    background: linear-gradient(180deg, rgba(252,254,236,1) 80%, rgba(163,154,249,1) 100%);
+    background: linear-gradient(180deg, rgba(252,254,236,1) 80%, #d4d0fa 100%);
 }
 
 .show_hello{
@@ -151,7 +151,7 @@ a{
 }
 
 #works{
-    background: linear-gradient(180deg, rgba(163,154,249,1) 0%, rgba(252,254,236,1) 30%);
+    background: linear-gradient(180deg, #d4d0fa 0%, rgba(252,254,236,1) 30%);
     min-height: 100vh;
     padding-top: 10vh;
     padding-bottom: 15vh;
