@@ -3,7 +3,7 @@
 :root{
     --text: #000000;
     --background: #fcfeec;
-    --primary: #d4d0fa;
+    --primary: #c3bef2;
     --secondary: #e8cafc;
     --accent: #0e67ec;
     --bg_accent: #eff1e0;
@@ -61,7 +61,7 @@ a{
     justify-content: center;
     align-items: center;
     /* background-size: 400% 400%; */
-    background: linear-gradient(180deg, rgba(252,254,236,1) 80%, #d4d0fa 100%);
+    background: linear-gradient(180deg, rgba(252,254,236,1) 80%, var(--primary) 100%);
 }
 
 .show_hello{
@@ -136,9 +136,17 @@ a{
     padding: 50px;
     box-sizing: border-box;
 }
+#about a{
+    /* text-shadow: 0px 0px 4px #ffffff; */
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
 #about span{
     font-size: 2em;
+    font-weight: 700;
+    /* text-shadow: 0px 0px 10px #ffffff; */
     text-align: center;
+    color: rgb(0, 0, 0);
 }
 @media (max-width: 768px) {
     #about{
@@ -151,7 +159,7 @@ a{
 }
 
 #works{
-    background: linear-gradient(180deg, #d4d0fa 0%, rgba(252,254,236,1) 30%);
+    background: linear-gradient(180deg, var(--primary) 0%, rgba(252,254,236,1) 30%);
     min-height: 100vh;
     padding-top: 10vh;
     padding-bottom: 15vh;
