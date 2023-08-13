@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Портфолио</title>
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="popup">
+            <div id="popup_wrapper">
+                <div class="popup_header">
+                    <div class="popup_title">Парсер товаров с WildBerries</div>
+                    <div class="popup_close" onclick="close_popup()">X</div>
+                </div>
+                <div class="popup_text"><span>Бла бла</span></div>
+            </div>
+        </div>
+        <!-- <div id="header">
+            <div class="header_wrapper">
+                <a href="#header">Главная</a>
+                <a href="#about">Обо мне</a>
+                <a href="#works">Работы</a>
+            </div>
+        </div> -->
+
+        <section id="hello" class="section" >
+            <div class="hello_circle" data-top="40px" data-left="20px" data-opacity="50%" data-size="10vw" data-color="pink"></div>
+            <div class="hello_circle" data-top="20%" data-left="78px" data-opacity="30%" data-size="7vw"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+            <div class="hello_circle" data-top="40px" data-left="70%" data-opacity="90%" data-size="12vw" data-color="#eff1e0"></div>
+
+
+            <img class="show_hello" data-delay="0.2s" style="opacity: 0;" src="assets/developer.png">
+            <h3 class="show_hello" data-delay="0.4s" style="opacity: 0;">Привет!</h3>
+            <h4 class="show_hello" data-delay="0.6s" style="opacity: 0;">Это мое портфолио</h4>
+        </section>
+
+        <section id="about" class="section">
+            <span>Еще раз здравствуйте! Меня зовут Степан, и я начинающий Python-разработчик. Изучаю этот язык уже 3 года, пока в качестве хобби для саморазвития. За это время я реализовал множество проектов разной сложности, постепенно совершенствуя свои навыки программирования. Так же практикуюсь во многих других языках.
+                <br><br>
+                Немного о себе: мне 19 лет, я студент 4 курса по специальности "КИПиА". Хоть моя основная специализация не связана с программированием, это не мешает мне развиваться в этой сфере. Пока я только новичок в роли фрилансера, но стремлюсь к профессиональному росту и готов взяться за интересные проекты, чтобы применить и улучшить свои навыки.<br><br><a href="https://t.me/skiste">t.me/skiste</a></span>
+        </section>
+        <section id="works" class="section">
+            <div class="works_title">Мои работы:</div>
+            <div class="works_wrapper">
+                <div class="one_work" onclick="show_popup('Парсер товаров WildBerries','Данная программа принимает на входе ссылку на страницу поиска WildBerries и кол-во страниц. <br><br>Программа листает весь сайт, сохраняя ссылки на товары с кол-вом отзывов больше 5 \(Настраивается в конфигурационном файле\). После прохода цикла прокрутки, программа заходит на каждый этот товар и проверяет, есть ли отзывы с фотографиями, если есть, то сохраняет в базу данных ссылку на этот товар.')" data-name="Парсер товаров WildBerries">
+                    <img src="assets/wb.png">
+                </div>
+                <div class="one_work" onclick="show_popup('Развлекательный бот для ВКонтакте','Данный развлекательный бот был сделан для собственной беседы, на данный момент не работает, ввиду отсутствия у меня сервера. <br><br>В нем я реализовал множество интересных функций для развлечения и не только. Из тех, которыми я горжусь:<br>• &#8223;жмых&#8223; - Сжимание фотографий по алгоритму прозванному seam-carving, с небольшими коэфицентами вещь полезная, но когда они большие, получается весьма забавный эффект. Принимает картинки, на выходе выдает либо картинку, либо гифку с процессом сжимания<br>• &#8223;демов&#8223;,&#8223;ascii&#8223;,&#8223;случ&#8223; - команды для работы с изображениями, ascii переводит картинку в ascii арт, демов создает демотиватор, случкот, случпанда и т.д. выдает случайные картинки<br><br>И множество других команд, но сюда их было бы сложно вместить')" data-name="Бот для ВКонтакте">
+                    <img src="assets/vk.png">
+                </div>
+                <div class="one_work" onclick="show_popup('Discord SoundBoard Editor','С недавним обновлением Discord появилась звуковая панель на серверах. На ней стоит ограничение в 8 звуков. Нам с друзьями такое не по нраву, и я решил написать небольшой скрипт, который берет из библиотеки звуков случайный и загружает. Для этого проекта мне пришлось выискивать нужные ссылки для запросов по api, разбирать все данные которые передаются и т.д.')" data-name="Discord SoundBoard Editor">
+                    <img src="assets/ds.png">
+                </div>
+                <div class="one_work" onclick="show_popup('DreamWombo API',`Данный проект был сделан для моего бота для ВКонтакте. <a href='https://github.com/SKISTE/Dream-Wombo-API'>(Ссылка)</a><br><br>`)" data-name="DreamWombo API">
+                    <img src="assets/wombo.png">
+                </div>
+                <div class="one_work" onclick="show_popup('WebHospital','Full stack приложение, в к')" data-name="Веб госпиталь">
+                    <img src="assets/wb.png">
+                </div>
+                <div class="one_work" onclick="show_popup('Остальное','У меня еще огромное кол-во проектов, которые остались в тени. В будущем здесь будет все больше и больше проектов...')" data-name="Остальное">
+                    <img src="assets/more.png">
+                </div>
+                
+
+                <!-- <div class="one_work" onclick="show_popup('title','t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>t<br>')" data-name="">
+                    <img src="assets/wb.png">
+                </div> -->
+
+                <!-- <div class="one_work" onclick="show_popup('title','text')" data-name="">
+                    <img src="assets/wb.png">
+                </div> -->
+            </div>
+        </section>
+        <script src="js/js.js"></script>
+    </body>
+</html>
