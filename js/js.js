@@ -33,16 +33,20 @@ function random_place_circles() {
         element.style.animation = 'show_hello_circles '+rnd_time+'s forwards ease-in-out'
         let rnd_gg = randomInteger(1,3)
         element.style.animationDelay = rnd_gg
+        element.style.transform = 'translateZ('+randomInteger(1,5)+')'
 
         setTimeout(function(){
             // console.log('showed! '+element)
-            element.style.animation = 'hello_circles_breath 3s infinite ease-in-out'
+            element.style.animation = 'hello_circles_breath 3s infinite linear'
             element.style.animationDuration = randomInteger(6,15)+'s'
             element.style.animationDelay = Math.random()*randomInteger(1,3) + 's'
-        },rnd_time*1000+rnd_gg+1000)
+        },rnd_time*1000)
 
-        // element.style.animationDuration = randomInteger(2,10)+'s'
-        // element.style.animationDelay = Math.random()*randomInteger(1,3) + 's'
+        // setTimeout(function(){
+        //     // console.log('showed! '+element)
+        //     element.style.animation = ''
+        // },rnd_time*1000+rnd_gg+1000)
+
     }
 }
 
@@ -76,4 +80,43 @@ function close_popup() {
     },800)
 }
 
+function go_paralax() {
+    // let elems = document.getElementsByClassName('hello_circle')
+    // for (let x = 0; x < elems.length; x++) {
+    //     const element = elems[x];
+    //     element.style.transform = 'translateY('+scrollY/4+'px)'
+    //     console.log(pageYOffset)
+    // }
+}
+
+// window.addEventListener('scroll', function() {
+//     // console.log(scrollY, window.screen.height/2)
+//     if(scrollY >= document.getElementById('hello').clientHeight/4){
+//         let text = document.getElementById('about').querySelector('span')
+//         // console.log(text)
+//         text.style.animation = 'animate_from_down .7s forwards ease-in-out'
+//     }
+//     else{
+//         // let text = document.getElementById('about').querySelector('span')
+//         // text.style.animation = ''
+//     }
+//   });
+
+
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('element-show');
+      }
+    });
+  }
+  let options = { threshold: [0.1] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+
 random_place_circles()
+
+
