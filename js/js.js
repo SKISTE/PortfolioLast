@@ -106,11 +106,17 @@ function go_paralax() {
 function onEntry(entry) {
     entry.forEach(change => {
       if (change.isIntersecting) {
-        change.target.classList.add('element-show');
+        // console.log(change.target)
+        if (change.target.classList.contains('THIS_IS_SPAN')){
+            change.target.classList.add('text_showing');
+        }
+        else{
+            change.target.classList.add('element-show');
+        }
       }
     });
   }
-  let options = { threshold: [0.1] };
+  let options = { threshold: [1] };
   let observer = new IntersectionObserver(onEntry, options);
   let elements = document.querySelectorAll('.element-animation');
   for (let elm of elements) {

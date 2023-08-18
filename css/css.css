@@ -136,6 +136,7 @@ a{
     /* justify-content: center; */
     padding: 50px;
     box-sizing: border-box;
+    flex-direction: column;
 }
 #about a{
     /* text-shadow: 0px 0px 4px #ffffff; */
@@ -167,13 +168,46 @@ a{
     
     /* Скроем элемент в начальном состоянии */
     opacity: 0;
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
+    /* transform: scale(0) translateY(-200%); */
   }
-  .element-animation.element-show {
-    opacity: 1 !important;
-    transition: all 1s;
-    transform: translateY(0%);
+.element-animation.element-show {
+    opacity: 1;
+    /* transition: all 1s; */
+    /* transform: translateY(0%); */
+    /* transform: scale(1) translateY(0%); */
+    animation: element_show .7s forwards ease-in-out;
   }
+.element-animation.text_showing{
+    opacity: 1;
+    animation: text_showing .7s forwards ease-in-out;
+}
+@keyframes text_showing {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes element_show {
+    0%{
+        /* transform: scale(0) translateY(200%); */
+        opacity: 0;
+        transform: scale(.1) translateY(200%);
+    }
+    70%{
+        /* transform: scale(1) translateY(0%); */
+        transform: scale(1) translateY(-30%);
+    }
+    100%{
+        opacity: 1;
+        /* transform: scale(1) translateY(0%); */
+        transform: translateY(0%);
+    }
+}
 
 #works{
     background: linear-gradient(180deg, var(--primary) 0%, rgba(252,254,236,1) 30%);
