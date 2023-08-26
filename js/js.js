@@ -123,6 +123,22 @@ function onEntry(entry) {
     observer.observe(elm);
   }
 
+
+
+const UrlHref = new URL(window.location.href)
+if(UrlHref.searchParams.size >= 1){
+    const has_tg = UrlHref.searchParams.get('tg')
+    if(has_tg == 'false'){
+        document.getElementById('TG_URL').style.display = 'none'
+    }
+}
+
+
+
+
+
 random_place_circles()
+
+
 
 
